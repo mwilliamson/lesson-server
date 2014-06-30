@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <h1>{{ lesson.title }}</h1>
+  
+  <ul>
+    <li><a href="#content">Content</a></li>
+  </ul>
+  
+  <h2 id="content">Content</h2>
+  
+  {{ lesson.lessonHtml | safe }}
+  
+{% endblock %}
+
+
