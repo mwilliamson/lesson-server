@@ -9,7 +9,17 @@
   
   <h2 id="content">Content</h2>
   
-  {{ lesson.lessonHtml | safe }}
+  <div id="content-container">
+    {{ lesson.lessonHtml | safe }}
+  </div>
+  
+  <script>
+    {{ browserJavaScript | safe }}
+  </script>
+  <script>
+    // TODO: find a way of doing this without using IDs
+    window["{{ browserModuleName }}"].init(document.getElementById("content-container"));
+  </script>
   
 {% endblock %}
 

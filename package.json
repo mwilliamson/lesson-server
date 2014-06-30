@@ -13,6 +13,7 @@
   "homepage": "https://github.com/mwilliamson/lesson-server",
   "dependencies": {
     "connect": "~2.21.1",
-    "nunjucks": "~1.0.5"
+    "nunjucks": "~1.0.5",
+    "browserify": "^4.2.0"
   }
 }
