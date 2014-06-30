@@ -9,7 +9,7 @@
   
   <h2 id="content">Content</h2>
   
-  <div id="content-container">
+  <div class="content-container">
     {{ lesson.lessonHtml | safe }}
   </div>
   
@@ -17,8 +17,13 @@
     {{ browserJavaScript | safe }}
   </script>
   <script>
-    // TODO: find a way of doing this without using IDs
-    window["{{ browserModuleName }}"].init(document.getElementById("content-container"));
+    (function() {
+      var module = window["{{ browserModuleName }}"];
+      var containers = document.getElementsByClassName("content-container");
+      var element = containers[containers.length - 1];
+      module.init(element);
+    })();
+    
   </script>
   
 {% endblock %}
