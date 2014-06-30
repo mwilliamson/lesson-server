@@ -5,26 +5,23 @@
   
   <ul>
     <li><a href="#content">Content</a></li>
+    <li><a href="#questions">Questions</a></li>
   </ul>
   
-  <h2 id="content">Content</h2>
-  
-  <div class="content-container">
-    {{ lesson.lessonHtml | safe }}
+  <div data-lesson-module="{{ browserModuleName }}">
+    <h2 id="content">Content</h2>
+    
+    <div class="content-container">
+      {{ lesson.lessonHtml | safe }}
+    </div>
+    
+    <h2 id="questions">Questions</h2>
   </div>
   
   <script>
     {{ browserJavaScript | safe }}
   </script>
-  <script>
-    (function() {
-      var module = window["{{ browserModuleName }}"];
-      var containers = document.getElementsByClassName("content-container");
-      var element = containers[containers.length - 1];
-      module.init(element);
-    })();
-    
-  </script>
+  <script src="/js/lesson.js"></script>
   
 {% endblock %}
 
