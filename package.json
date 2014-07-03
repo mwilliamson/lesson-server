@@ -18,6 +18,7 @@
     "browserify-middleware": "^3.0.0",
     "web-widgets-knockout": "^0.1.1",
     "knockout": "^3.1.0",
-    "brfs": "^1.1.1"
+    "brfs": "^1.1.1",
+    "bluebird": "^2.1.3"
   }
 }
