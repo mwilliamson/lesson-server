@@ -1,5 +1,5 @@
 module.exports = {
-    lessons: {
-        "4": __dirname + "/addition.js"
-    }
+    lessons: [
+        __dirname + "/addition.js"
+    ]
 };
