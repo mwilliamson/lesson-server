@@ -24,7 +24,7 @@
   <script>
     {{ browserJavaScript | safe }}
   </script>
-  <script src="/js/lesson.js"></script>
+  <script src="{% static_url 'js/lesson.js' %}"></script>
   
 {% endblock %}
 
