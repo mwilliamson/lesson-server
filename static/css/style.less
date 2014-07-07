@@ -147,3 +147,15 @@ input[type=submit]::-moz-focus-inner{
 .mark.mark-correct {
     color: @correct-color;
 }
+
+.table {
+    border-collapse: collapse;
+    
+    & > tr, & > thead > tr, & > tbody > tr {
+        & > td, & > th {
+            border: 1px solid #ddd;
+            padding: 4px 18px;
+            text-align: left;
+        }
+    }
+}
