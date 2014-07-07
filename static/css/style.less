@@ -65,33 +65,33 @@ input[type=submit]::-moz-focus-inner{
     padding: 10px 20px;
     background-color: #f0f0f5;
     min-height: 50em;
-}
-
-.test .choices {
-    margin: 0;
-    padding: 0;
-}
-
-.test .choices li {
-    .action;
     
-    display: inline-block;
-    margin: 0 0 0 10px;
-    background-color: @answer-entry-color;
-    color: #fff;
-}
-
-.test .choices li:first-child {
-    margin-left: 0;
-}
-
-.test .choices li.disabled {
-    background-color: #566C99;
-    cursor: default;
-}
-
-.test .choices li.disabled.selected {
-    background-color: #0055FF;
+    .choices {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            .action;
+            
+            display: inline-block;
+            margin: 0 0 0 10px;
+            background-color: @answer-entry-color;
+            color: #fff;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+            
+            .disabled {
+                background-color: #566C99;
+                cursor: default;
+                
+                .selected {
+                    background-color: #0055FF;
+                }
+            }
+        }
+    }
 }
 
 .show-explanation {
