@@ -44,7 +44,7 @@ var innerWidget = knockoutWidgets.create({
         next();
         
         function next() {
-            question(generateQuestion(onAnswer));
+            question(generateQuestion(once(onAnswer)));
             showNextQuestion(false);
         }
         
@@ -67,3 +67,15 @@ var innerWidget = knockoutWidgets.create({
         });
     }
 });
+
+function once(func) {
+    var done = false;
+    return function() {
+        if (done) {
+            return;
+        } else {
+            done = true;
+            func.apply(this, arguments);
+        }
+    };
+}
