@@ -1,13 +1,17 @@
-<p>
-  Goal: Get <span data-bind="text: progress.target"></span> questions right in a row <br />
-  Progress:
-  <span data-bind="foreach: progress.marks()">
-    <span class="mark" data-bind="css: className, text: text"></span>
-  </span>
-  <span data-bind="style: {visibility: progress.done() ? 'visible' : 'hidden'}">
-    <br />You've hit the goal, but you can carry on answering questions if you want.
-  </span>
-</p>
+<ul class="progress">
+  <li>
+    Goal: Get <span data-bind="text: progress.target"></span> questions right in a row
+  </li>
+  <li>
+    Progress:
+    <span data-bind="foreach: progress.marks()">
+      <span class="mark" data-bind="css: className, text: text"></span>
+    </span>
+  </li>
+  <li data-bind="style: {visibility: progress.done() ? 'visible' : 'hidden'}">
+    You've hit the goal, but you can carry on answering questions if you want.
+  </li>
+</ul>
 
 <div data-bind="widget: questionWidget"></div>
 
